@@ -42,7 +42,15 @@ class EventoController extends Controller
         $qr = QrCode::generate($url);
 
          // Cargar la vista HTML
-         $html = view('pdf', [
+         //*******Congreso */
+         /*$html = view('pdf', [
+            'participante'=>$participante,
+            'evento'=>$evento,
+            'qr'=>$qr,
+            ])->render();
+            */
+        //*******Curso */
+         $html = view('curso', [
             'participante'=>$participante,
             'evento'=>$evento,
             'qr'=>$qr,
@@ -54,7 +62,7 @@ class EventoController extends Controller
         $dompdf->set_option('isRemoteEnabled','true');
 
         // (Opcional) Configurar opciones de visualización (tamaño de papel, etc.)
-        $dompdf->setPaper('latter', 'portrait');
+        $dompdf->setPaper('latter', 'landscape');
 
         // Renderizar el HTML como PDF
         $dompdf->render();

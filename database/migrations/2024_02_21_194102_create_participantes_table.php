@@ -13,7 +13,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('evento_id');
             $table->foreign('evento_id')->references('id')->on('eventos');
-            $table->string('certificado');
+            $table->string('certificado')->nullable();
             $table->string('tipo',30);
             $table->string('grado',10)->nullable();
             $table->string('carnet');
