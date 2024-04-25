@@ -43,19 +43,20 @@ class EventoController extends Controller
 
          // Cargar la vista HTML
          //*******Congreso */
-         /*$html = view('pdf', [
+         $html = view('pdf', [
             'participante'=>$participante,
             'evento'=>$evento,
             'qr'=>$qr,
             ])->render();
-            */
+            
         //*******Curso */
+        /*
          $html = view('curso', [
             'participante'=>$participante,
             'evento'=>$evento,
             'qr'=>$qr,
             ])->render();
-
+            */
         // Configurar DomPDF
         $dompdf = new Dompdf();
         $dompdf->loadHtml($html);

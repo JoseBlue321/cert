@@ -230,7 +230,7 @@
     </div>
 
     <div class="correlativo">
-        GENETICA/{{$evento->codigo}}-{{$participante->id}}/2024
+        GENETICA/CURSO/{{$evento->codigo}}-{{$participante->id}}/2024
     </div>
 
     <div class="certificado">
@@ -276,7 +276,7 @@
 
     <!--QR-->
     <div class="qr text-center">
-        Cod: {{$evento->codigo}}/{{$participante->id}}/2023 <br>
+        Cod: {{$evento->codigo}}/{{$participante->id}}/2024<br>
         <img src="data:image/png;base64,{{ base64_encode($qr) }}" height="120px" width="120px" alt="Código QR">
     </div>
 
