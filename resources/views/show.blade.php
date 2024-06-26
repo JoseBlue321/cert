@@ -13,6 +13,8 @@
                         <tr>
                             <th>id</th>
                             <th>carnet</th>
+                            <th>tipo</th>
+                            <th>grado</th>
                             <th>nombre</th>
                             <th>paterno</th>
                             <th>materno</th>
@@ -26,6 +28,8 @@
                         <tr>
                             <td>{{$participante->id}}</td>
                             <td>{{$participante->carnet}}</td>
+                            <td>{{$participante->tipo}}</td>
+                            <td>{{$participante->grado}}</td>
                             <td>{{$participante->nombre}}</td>
                             <td>{{$participante->paterno}}</td>
                             <td>{{$participante->materno}}</td>

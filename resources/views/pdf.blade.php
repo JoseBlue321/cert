@@ -62,9 +62,9 @@
 }
 .sello{
     position: absolute;
-    top: 500px; 
-    /*left: 5px;*/ 
-    right:300px;
+    top: 455px; 
+    left: 345px; 
+    /*right:300px;*/
     /*bottom:50px;*/
 }
 
@@ -134,7 +134,7 @@
     position: absolute;
     text-align: center;
     top: 260px; 
-    left: 200px; 
+    left: 180px; 
     /*right:0px;*/
     /*bottom:50px;*/
     font-size: 30px; /*Tamaño de texto*/
@@ -155,6 +155,13 @@
     /*font-style: normal; /* Estilo de la fuente en cursiva */
     /*text-decoration: none; /* Subraya el texto */
     }
+    .firma_decano {
+    position: absolute;
+    top: 545px; 
+    left: 200px; 
+    /*right:0px;*/
+    /*bottom:50px;*/
+}
     .firma1{
     position: absolute;
     top: 600px; 
@@ -169,6 +176,13 @@
     width: 200px;
     text-align: center;
     }
+    .firma_noemi {
+    position: absolute;
+    top: 540px; 
+    left: 430px; 
+    /*right:0px;*/
+    /*bottom:50px;*/
+}
     .firma2{
     position: absolute;
     top: 600px; 
@@ -183,10 +197,10 @@
     width: 200px;
     text-align: center;
     }
-    .f3 {
+    .firma_marcela {
     position: absolute;
-    top: 570px; 
-    left: 640px; 
+    top: 545px; 
+    left: 645px; 
     /*right:0px;*/
     /*bottom:50px;*/
 }
@@ -274,11 +288,11 @@
 
     <div class="confiere">
         La asociación latinoamericana de Mutagénesis, Carcinogénesis y Teratogénesis Ambiental
-Otorga el presente certificado de : <b>{{ strtoupper($participante->tipo) }}</b>
+Otorga el presente certificado como : <b>{{ mb_strtoupper($participante->tipo) }}</b>
     </div>
 
     <div class="nombre">
-        A: {{ strtoupper($participante->grado) }} {{ strtoupper($participante->nombre) }} {{ strtoupper($participante->paterno) }} {{ strtoupper($participante->materno) }}
+        A: {{ strtoupper($participante->grado) }} {{ mb_strtoupper($participante->nombre) }} {{ mb_strtoupper($participante->paterno) }} {{ mb_strtoupper($participante->materno) }}
     </div>
 
     <div class="contenido">
@@ -289,19 +303,24 @@ Otorga el presente certificado de : <b>{{ strtoupper($participante->tipo) }}</b>
             <b>con 40 horas académicas.</b> 
         </p>
     </div>
-
+    <div class="firma_decano">
+        <img src="{{asset('firmas/Firma_Decano.jpg')}}" alt="firma decano" width="150px" height="60px">
+    </div>
     <div class="firma1">
         Dr. David B. Mérida Vargas <br>
         <b>DECANO</b> <br>
         FACULTAD DE MEDICINA, ENFERMERÍA, NUTRICIÓN Y TECNOLOGÍA MÉDICA
     </div>
+    <div class="firma_noemi">
+        <img src="{{asset('firmas/Firma_Noemi.jpeg')}}" alt="firma noemi" width="130px" height="70px">
+    </div>
     <div class="firma2">
-        DRA. NOEMI TIRADO B. <br>
+        Dra. Noemi Tirado B. <br>
         <b>PRESIDENTA ALAMCTA</b> <br>
         ORGANIZADORA
     </div>
-    <div class="f3">
-        <!--<img src="{{asset('firmas/firma3.png')}}" alt="firma 3" width="150px" height="30px">-->
+    <div class="firma_marcela">
+        <img src="{{asset('firmas/Firma_Marcela_2.jpg')}}" alt="firma marcela" width="160px" height="60px">
     </div>
     <div class="firma3">
         Dra. Marcela López N.<br>

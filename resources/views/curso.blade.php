@@ -110,7 +110,7 @@
     .nombre{
     position: absolute;
     text-align: center;
-    top: 230px; 
+    top: 240px; 
     left: 230px; 
     /*right:0px;*/
     /*bottom:50px;*/
@@ -132,6 +132,13 @@
     /*font-style: normal; /* Estilo de la fuente en cursiva */
     /*text-decoration: none; /* Subraya el texto */
     }
+    .firma_decano {
+    position: absolute;
+    top: 545px; 
+    left: 200px; 
+    /*right:0px;*/
+    /*bottom:50px;*/
+}
     .firma1{
     position: absolute;
     top: 600px; 
@@ -146,6 +153,13 @@
     width: 200px;
     text-align: center;
     }
+    .firma_noemi {
+    position: absolute;
+    top: 540px; 
+    left: 430px; 
+    /*right:0px;*/
+    /*bottom:50px;*/
+}
     .firma2{
     position: absolute;
     top: 600px; 
@@ -242,7 +256,7 @@
     </div>
 
     <div class="nombre">
-        {{ strtoupper($participante->grado) }} {{ strtoupper($participante->nombre) }} {{ strtoupper($participante->paterno) }} {{ strtoupper($participante->materno) }}
+        {{ strtoupper($participante->grado) }} {{ mb_strtoupper($participante->nombre) }} {{ mb_strtoupper($participante->paterno) }} {{ mb_strtoupper($participante->materno) }}
     </div>
 
     <div class="contenido">
@@ -255,10 +269,16 @@
         </p>
     </div>
 
+    <div class="firma_decano">
+        <img src="{{asset('firmas/Firma_Decano.jpg')}}" alt="firma decano" width="150px" height="60px">
+    </div>
     <div class="firma1">
         Dr. David B. Mérida Vargas <br>
         <b>DECANO</b> <br>
         FACULTAD DE MEDICINA, ENFERMERÍA, NUTRICIÓN Y TECNOLOGÍA MÉDICA
+    </div>
+    <div class="firma_noemi">
+        <img src="{{asset('firmas/Firma_Noemi.jpeg')}}" alt="firma noemi" width="130px" height="70px">
     </div>
     <div class="firma2">
         DRA. NOEMI TIRADO B. <br>

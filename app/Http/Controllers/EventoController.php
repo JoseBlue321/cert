@@ -33,21 +33,22 @@ class EventoController extends Controller
         $evento = $participante->eventos;
 
         // URL para el código QR
-        $url = "
-        Carnet:$participante->carnet 
+        $url = "ID:$participante->id 
         Nombre:$participante->nombre $participante->paterno $participante->materno
         Cod evento: $evento->codigo
         evento: $evento->evento
-        fecha: $evento->fecha ";
+        fecha: $evento->fecha";
         $qr = QrCode::generate($url);
 
          // Cargar la vista HTML
          //*******Congreso */
+         
          $html = view('pdf', [
             'participante'=>$participante,
             'evento'=>$evento,
             'qr'=>$qr,
             ])->render();
+           
             
         //*******Curso */
         /*
@@ -70,7 +71,7 @@ class EventoController extends Controller
 
         // Devolver el PDF generado como respuesta
         //return $dompdf->stream("$participante->carnet.pdf");
-        return $dompdf->stream("$participante->carnet.pdf", ['Attachment' => 0]);
+        return $dompdf->stream("$participante->id.pdf", ['Attachment' => 0]);
        
     }
 }
