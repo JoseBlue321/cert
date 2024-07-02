@@ -32,46 +32,34 @@ class EventoController extends Controller
         $participante = Participante::findOrFail($id);
         $evento = $participante->eventos;
 
-        // URL para el código QR
-        $url = "ID:$participante->id 
-        Nombre:$participante->nombre $participante->paterno $participante->materno
-        Cod evento: $evento->codigo
-        evento: $evento->evento
-        fecha: $evento->fecha";
-        $qr = QrCode::generate($url);
+         // URL para el código QR
+         $url = "ID:$participante->id
+         Cod:  $participante->codigo
+         Nombre:$participante->nombre $participante->paterno $participante->materno
+         Cod evento: $evento->codigo
+         evento: $evento->evento
+         fecha: $evento->fecha";
+         $qr = QrCode::generate($url);
 
-         // Cargar la vista HTML
-         //*******Congreso */
-         
-         $html = view('pdf', [
+         $html = view($evento->codigo, [
             'participante'=>$participante,
             'evento'=>$evento,
             'qr'=>$qr,
             ])->render();
-           
-            
-        //*******Curso */
-        /*
-         $html = view('curso', [
-            'participante'=>$participante,
-            'evento'=>$evento,
-            'qr'=>$qr,
-            ])->render();
-            */
-        // Configurar DomPDF
-        $dompdf = new Dompdf();
-        $dompdf->loadHtml($html);
-        $dompdf->set_option('isRemoteEnabled','true');
+                // Configurar DomPDF
+                $dompdf = new Dompdf();
+                $dompdf->loadHtml($html);
+                $dompdf->set_option('isRemoteEnabled','true');
+        
+                // (Opcional) Configurar opciones de visualización (tamaño de papel, etc.)
+                $dompdf->setPaper('latter', 'landscape');
+        
+                // Renderizar el HTML como PDF
+                $dompdf->render();
+        
+                // Devolver el PDF generado como respuesta
+                //return $dompdf->stream("$participante->carnet.pdf");
+                return $dompdf->stream("$participante->id.pdf", ['Attachment' => 0]);
+}
 
-        // (Opcional) Configurar opciones de visualización (tamaño de papel, etc.)
-        $dompdf->setPaper('latter', 'landscape');
-
-        // Renderizar el HTML como PDF
-        $dompdf->render();
-
-        // Devolver el PDF generado como respuesta
-        //return $dompdf->stream("$participante->carnet.pdf");
-        return $dompdf->stream("$participante->id.pdf", ['Attachment' => 0]);
-       
-    }
 }
