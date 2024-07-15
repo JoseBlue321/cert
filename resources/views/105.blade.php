@@ -38,7 +38,7 @@
     top: 25px; 
     left: 180px; 
     text-align: center;
-    font-size: 12px; /*Tamaño de texto*/
+    font-size: 10px; /*Tamaño de texto*/
     font-family: 'Times New Roman', Times, serif; /*tipo de texto*/
     font-weight: bold; /* Peso de la fuente en negrita */
     font-style: normal; /* Estilo de la fuente en cursiva */
@@ -260,13 +260,13 @@
 
     <!--Contenido-->
     <div class="titulo1">
-        <h1 >UNIVERSIDAD MAYOR DE SAN ANDRÉS</h1>
-        <h2>FACULTAD DE MEDICINA, ENFERMERÍA, NUTRICIÓN Y TECNOLOGÍA MÉDICA</h2>
-        <h2>Unidad de Parasitología, Medicina Tropical y Medio Ambiente, <br>
+        <h1 >Universidad Mayor de San Andrés</h1>
+        <h1>Facultad de Medicina, Enfermería, Nutrición y Tecnología Médica</h1>
+        <h1>Unidad de Parasitología, Medicina Tropical y Medio Ambiente, <br>
             Instituto de Investigación en Salud y Desarrollo <br>
             UPAMETROP/IINSAD <br>
             Departamento de Patología, Cátedra de Parasitología
-        </h2>
+        </h1>
     </div>
     <div class="titulo2">
         <h1>

@@ -15,6 +15,7 @@
                             <th>DETALLE</th>
                             <th>FECHA</th>
                             <th>VER</th>
+                            <th>GENERAR TODO</th>
                         </tr>
                     </thead>
                     <tbody>
