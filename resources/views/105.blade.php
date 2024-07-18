@@ -37,6 +37,7 @@
     position: absolute;
     top: 25px; 
     left: 180px; 
+    right: 180px;
     text-align: center;
     font-size: 10px; /*Tamaño de texto*/
     font-family: 'Times New Roman', Times, serif; /*tipo de texto*/
@@ -49,7 +50,8 @@
     .titulo2{
     position: absolute;
     top: 180px; 
-    left: 200px; 
+    left: 180px; 
+    right: 180px;
     text-align: center;
     font-size: 12px; /*Tamaño de texto*/
     font-family: 'Times New Roman', Times, serif; /*tipo de texto*/
@@ -61,27 +63,29 @@
 
     .titulo3{
     position: absolute;
-    top: 220px; 
-    left: 260px; 
+    top: 205px; 
+    left: 180px; 
+    right: 180px;
     text-align: center;
     font-size: 12px; /*Tamaño de texto*/
     font-family: 'Times New Roman', Times, serif; /*tipo de texto*/
     font-weight: bold; /* Peso de la fuente en negrita */
     font-style: normal; /* Estilo de la fuente en cursiva */
     text-decoration: none; /* Subraya el texto */
-    color:rgb(41, 128, 185);
+    color:rgb(21, 101, 192);
     }
     .titulo4{
     position: absolute;
     top: 250px; 
-    left: 260px; 
+    left: 180px; 
+    right: 180px;
     text-align: center;
     font-size: 12px; /*Tamaño de texto*/
     font-family: 'Times New Roman', Times, serif; /*tipo de texto*/
     font-weight: bold; /* Peso de la fuente en negrita */
     font-style: normal; /* Estilo de la fuente en cursiva */
     text-decoration: none; /* Subraya el texto */
-    color:rgb(34, 153, 84);
+    color:rgb(51, 105, 30);
     }
     .titulo5{
     position: absolute;
@@ -98,7 +102,7 @@
     }
     .titulo6{
     position: absolute;
-    top: 390px; 
+    top: 380px; 
     left: 180px; 
     right: 180px;
     text-align: center;
@@ -148,11 +152,16 @@
     text-decoration: none; /* Subraya el texto */
     color:rgb(23, 32, 42);
     }
-
-    .firma_dina{
+    .sello{
     position: absolute;
-    top: 550px; 
-    left: 150px; 
+    top: 500px; 
+    left: 210px; 
+    }
+
+    .firma_eddy{
+    position: absolute;
+    top: 560px; 
+    left: 90px; 
     }
     .firma1{
     position: absolute;
@@ -167,10 +176,10 @@
     text-align: center;
     }
 
-    .firma_nelson{
+    .firma_ana{
     position: absolute;
-    top: 560px; 
-    left: 400px; 
+    top: 580px; 
+    left: 320px; 
     }
     .firma2{
     position: absolute;
@@ -185,10 +194,10 @@
     text-align: center;
     }
 
-    .firma_alanes{
+    .firma_villarroel{
     position: absolute;
-    top: 560px; 
-    left: 650px; 
+    top: 540px; 
+    left: 540px; 
     }
     .firma3{
     position: absolute;
@@ -206,8 +215,8 @@
     }
     .firma_decano{
     position: absolute;
-    top: 600px; 
-    right: 80px; 
+    top: 590px; 
+    left: 770px; 
     }
     .firma4{
     position: absolute;
@@ -273,10 +282,10 @@
             Department of Anthropology, Northern Illinois University / NIU
         </h1>
     </div>
-
     <div class="titulo3">
         <h1>Red Boliviana de Primatología / REDBOLPRIM</h1>
     </div>
+
     <div class="titulo4">
         <h1>SEMINARIO  CIENTÍFICO INTERNACIONAL</h1>
     </div>
@@ -291,6 +300,7 @@
         <br>(Resolución Honorable Consejo Facultativo N° 463/2024)
         </h3>
     </div>
+
     <div class="titulo7">
         <p><b>CERTIFICADO</b> </p>
     </div>
@@ -303,20 +313,27 @@
         <p>- {{ strtoupper($participante->tipo) }} -</p>
     </div>
 
+    <div class="firma_eddy">
+        <img src="{{asset('img/105/eddy.png')}}" alt="firma eddy" width="40%">
+    </div>
     <div class="firma1">
         Dr. Eddy Martínez Avendaño<br>
         <b>ORGANIZADOR</b> <br>
         UPAMETROP/IINSAD/UMSA
     </div>
 
-
+    <div class="firma_ana">
+        <img src="{{asset('img/105/ana.png')}}" alt="firma ana" width="45%">
+    </div>
     <div class="firma2">
         Dra. Ana María Aguilar Liendo<br>
         <b>DIRECTORA</b> <br>
         IINSAD/UMSA
     </div>
 
-
+    <div class="firma_villarroel">
+        <img src="{{asset('img/105/villarroel.png')}}" alt="firma villarroel" width="45%">
+    </div>
     <div class="firma3">
         Dr. Martín Villarroel Mareño<br>
         <b>VICEDECANO</b> <br>
@@ -324,12 +341,16 @@
     </div>
 
     <div class="firma_decano">
-        <img src="{{asset('img/105/decano.png')}}" alt="firma ddecano" width="170px" height="60px">
+        <img src="{{asset('img/105/decano.png')}}" alt="firma decano" width="70%">
     </div>
     <div class="firma4">
         Dr. David Mérida Vargas<br>
         <b>DECANO</b> <br>
         FACULTAD DE MEDICINA/UMSA 
+    </div>
+
+    <div class="sello">
+        <img src="{{asset('img/105/sello.png')}}" alt="sello" width="33%">
     </div>
 
     <!--QR-->

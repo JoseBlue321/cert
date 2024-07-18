@@ -33,13 +33,13 @@ class EventoController extends Controller
         $evento = $participante->eventos;
 
          // URL para el código QR
-         $url = "ID:$participante->id
-         Cod:  $participante->codigo
-         Nombre:$participante->nombre $participante->paterno $participante->materno
-         Cod evento: $evento->codigo
-         evento: $evento->evento
-         fecha: $evento->fecha";
-         $qr = QrCode::generate($url);
+        $url = "ID:$participante->id
+        Cod:  $participante->codigo
+        Nombre: $participante->nombre $participante->paterno $participante->materno
+        Cod evento: $evento->codigo
+        Evento: $evento->evento
+        Fecha: $evento->fecha";
+         $qr = QrCode::encoding('UTF-8')->generate($url);
 
          $html = view($evento->codigo, [
             'participante'=>$participante,
