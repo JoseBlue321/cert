@@ -39,7 +39,7 @@
     left: 180px; 
     right: 180px;
     text-align: center;
-    font-size: 10px; /*Tamaño de texto*/
+    font-size: 11px; /*Tamaño de texto*/
     font-family: 'Times New Roman', Times, serif; /*tipo de texto*/
     font-weight: bold; /* Peso de la fuente en negrita */
     font-style: normal; /* Estilo de la fuente en cursiva */
@@ -49,7 +49,7 @@
 
     .titulo2{
     position: absolute;
-    top: 180px; 
+    top: 155px; 
     left: 180px; 
     right: 180px;
     text-align: center;
@@ -63,7 +63,7 @@
 
     .titulo3{
     position: absolute;
-    top: 205px; 
+    top: 182px; 
     left: 180px; 
     right: 180px;
     text-align: center;
@@ -76,7 +76,7 @@
     }
     .titulo4{
     position: absolute;
-    top: 250px; 
+    top: 230px; 
     left: 180px; 
     right: 180px;
     text-align: center;
@@ -89,7 +89,7 @@
     }
     .titulo5{
     position: absolute;
-    top: 280px; 
+    top: 260px; 
     left: 180px; 
     right: 180px;
     text-align: center;
@@ -102,7 +102,7 @@
     }
     .titulo6{
     position: absolute;
-    top: 380px; 
+    top: 365px; 
     left: 180px; 
     right: 180px;
     text-align: center;
@@ -115,7 +115,7 @@
     }
     .titulo7{
     position: absolute;
-    top: 450px; 
+    top: 445px; 
     left: 180px; 
     right: 180px;
     text-align: center;
@@ -154,18 +154,18 @@
     }
     .sello{
     position: absolute;
-    top: 500px; 
-    left: 210px; 
+    top: 520px; 
+    left: 215px; 
     }
 
     .firma_eddy{
     position: absolute;
-    top: 560px; 
+    top: 590px; 
     left: 90px; 
     }
     .firma1{
     position: absolute;
-    top: 650px; 
+    top: 680px; 
     left: 50px; 
     font-size: 15px; /*Tamaño de texto*/
     font-family: 'Times New Roman', Times, serif; /*tipo de texto*/
@@ -178,12 +178,12 @@
 
     .firma_ana{
     position: absolute;
-    top: 580px; 
+    top: 610px; 
     left: 320px; 
     }
     .firma2{
     position: absolute;
-    top: 650px; 
+    top: 680px; 
     left: 300px; 
     font-size: 15px; /*Tamaño de texto*/
     font-family: 'Times New Roman', Times, serif; /*tipo de texto*/
@@ -196,12 +196,12 @@
 
     .firma_villarroel{
     position: absolute;
-    top: 540px; 
+    top: 570px; 
     left: 540px; 
     }
     .firma3{
     position: absolute;
-    top: 650px; 
+    top: 680px; 
     left: 500px; 
     /*right:80px;*/
     /*bottom:50px;*/
@@ -215,12 +215,12 @@
     }
     .firma_decano{
     position: absolute;
-    top: 590px; 
+    top: 620px; 
     left: 770px; 
     }
     .firma4{
     position: absolute;
-    top: 650px; 
+    top: 680px; 
     right:50px;
     /*bottom:50px;*/
     font-size: 15px; /*Tamaño de texto*/
@@ -236,7 +236,20 @@
     /*top: 10px;*/ 
     /*left: 20px;*/ 
     right:40px;
-    bottom:250px;
+    bottom:260px;
+}
+.fecha {
+    position: absolute;
+    /*top: 10px;*/ 
+    /*left: 20px;*/ 
+    right:40px;
+    bottom:220px;
+    font-size: 15px; /*Tamaño de texto*/
+    font-family: 'Times New Roman', Times, serif; /*tipo de texto*/
+    font-weight: bold; /* Peso de la fuente en negrita */
+    font-style: normal; /* Estilo de la fuente en cursiva */
+    text-decoration: none; /* Subraya el texto */
+    color:rgb(23, 32, 42);
 }
 
     </style>
@@ -269,11 +282,10 @@
 
     <!--Contenido-->
     <div class="titulo1">
-        <h1 >Universidad Mayor de San Andrés</h1>
-        <h1>Facultad de Medicina, Enfermería, Nutrición y Tecnología Médica</h1>
-        <h1>Unidad de Parasitología, Medicina Tropical y Medio Ambiente, <br>
-            Instituto de Investigación en Salud y Desarrollo <br>
-            UPAMETROP/IINSAD <br>
+        <h1 >Universidad Mayor de San Andrés <br>
+             Facultad de Medicina, Enfermería, Nutrición y Tecnología Médica <br>
+             Unidad de Parasitología, Medicina Tropical y Medio Ambiente, <br>
+            Instituto de Investigación en Salud y Desarrollo UPAMETROP/IINSAD <br>
             Departamento de Patología, Cátedra de Parasitología
         </h1>
     </div>
@@ -290,7 +302,7 @@
         <h1>SEMINARIO  CIENTÍFICO INTERNACIONAL</h1>
     </div>
     <div class="titulo5">
-        <h1>“De la biología a la búsqueda de patógenos zoonóticos emergentes en micromamíferos amazónicos, 
+        <h1>“De la biología a la búsqueda de patógenos zoonóticos emergentes en micromamíferos amazónicos, <br>
             bajo el enfoque de Una Salud (One Health)”
         </h1>
     </div>
@@ -351,6 +363,12 @@
 
     <div class="sello">
         <img src="{{asset('img/105/sello.png')}}" alt="sello" width="33%">
+    </div>
+
+    <div class="fecha">
+        <em>
+            La Paz, Bolivia - Mayo 14, 2024
+        </em>
     </div>
 
     <!--QR-->

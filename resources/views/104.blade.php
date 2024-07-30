@@ -96,8 +96,8 @@
 
     .firma_dina{
     position: absolute;
-    top: 560px; 
-    left: 150px; 
+    top: 520px; 
+    left: 120px; 
     }
     .firma1{
     position: absolute;
@@ -130,10 +130,10 @@
     text-align: center;
     }
 
-    .firma_alanes{
+    .firma_vicedecana{
     position: absolute;
-    top: 560px; 
-    left: 650px; 
+    top: 520px; 
+    left: 695px; 
     }
     .firma3{
     position: absolute;
@@ -146,7 +146,7 @@
     /*font-weight: 300; /* Peso de la fuente en negrita */
     /*font-style: normal; /* Estilo de la fuente en cursiva */
     /*text-decoration: none; /* Subraya el texto */
-    width: 250px;
+    width: 260px;
     text-align: center;
     }
     .qr {
@@ -211,24 +211,29 @@
         </p>
     </div>
     <div class="firma_dina">
-        <img src="{{asset('img/104/dina.png')}}" alt="firma dina" width="240px" height="120px">
+        <img src="{{asset('img/104/dina.png')}}" alt="firma dina" width="45%">
     </div>
     <div class="firma1">
         Dra. Dina Zapana  <br>
-        <b>JEFE a.i. CAPÍTULO INMUNOLOGÍA</b>
+        <b>JEFE a.i. </b> <br>
+        CAPÍTULO INMUNOLOGÍA
     </div>
 
-
+    <div class="firma_nelson">
+        <img src="{{asset('img/104/nelson.png')}}" alt="firma nelson" width="40%">
+    </div>
     <div class="firma2">
         Dr. Nelson Ramírez<br>
         <b>JEFE DE DEPARTAMENTO</b> <br>
         MEDICINA Y SALUD MENTAL
     </div>
 
-
+    <div class="firma_vicedecana">
+        <img src="{{asset('img/104/vicedecana.png')}}" alt="firma vicedecana" width="40%">
+    </div>
     <div class="firma3">
-        Dra. Angela Ma. Clara Alanes Fernandez<br>
-        <b>VICEDECANA a.i.</b> <br>
+        Dra. Mónica Consuelo Guzman Mendoza<br>
+        <b>VICEDECANA</b> <br>
         FACULTAD DE MEDICINA
     </div>
 
