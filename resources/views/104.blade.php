@@ -240,7 +240,7 @@
     <!--QR-->
     <div class="qr text-center">
         Cod: {{$evento->codigo}}/{{$participante->id}}/2024 <br>
-        <img src="data:image/png;base64,{{ base64_encode($qr) }}" height="120px" width="120px" alt="Código QR">
+        <img src="data:image/png;base64,{{ base64_encode($qr) }}" height="130px" width="130px" alt="Código QR">
     </div>
 
     @include('partials.js')

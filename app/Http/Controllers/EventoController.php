@@ -13,6 +13,7 @@ use setasign\Fpdi\Tcpdf\Fpdi;
 use Illuminate\Support\Facades\Storage;
 //Generador de codigo QR
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use Carbon\Carbon; //cambiar la fecha a texto
 
 class EventoController extends Controller
 {
@@ -35,13 +36,22 @@ class EventoController extends Controller
         $participante = Participante::findOrFail($id);
         $evento = $participante->eventos;
 
+
+        // Crear un objeto Carbon a partir de la fecha dada
+        Carbon::setLocale('es'); 
+        $date = Carbon::createFromFormat('Y-m-d', $evento->fecha);
+        // Formatear la fecha a texto en español
+        $formattedDate = $date->translatedFormat('l, j \de F \de Y'); // Ejemplo: "viernes, 12 de julio de 2024"
+
+
          // URL para el código QR
-        $url = "ID:$participante->id
-        Cod:  $participante->codigo
-        Nombre: $participante->nombre $participante->paterno $participante->materno
-        Cod evento: $evento->codigo
-        Evento: $evento->evento
-        Fecha: $evento->fecha";
+        $url = "ID: $participante->id
+Nombre: $participante->nombre $participante->paterno $participante->materno
+Evento: $evento->evento
+Fecha: $formattedDate
+Verifica tu certificado en el siguiente enlace:
+https://fment.es/validacion
+Ingresando el ID: $participante->id";
         
          $qr = QrCode::encoding('UTF-8')->generate($url);
 
@@ -63,40 +73,48 @@ class EventoController extends Controller
 
                 //****Configurar la protección del PDF****
                 // Guardar el contenido del PDF en un archivo temporal
-                $tempPdfPath = storage_path('app/cert/temp.pdf');
+                $tempPdfPath = storage_path("app/$evento->codigo/$participante->id.pdf");
                 file_put_contents($tempPdfPath, $dompdf->output());
         
                 // Proteger el PDF
-                $protectedPdfPath = storage_path('app/cert/protected_documento.pdf');
-                $this->protectPDF($tempPdfPath, $protectedPdfPath, 'user_password', 'owner_password');
+                $protectedPdfPath = storage_path("app/$evento->codigo/$participante->id.pdf");
+                $this->protectPDF($tempPdfPath, $protectedPdfPath, "", "vicedecanato" ,$evento->evento, "$participante->nombre $participante->paterno $participante->materno");
         
                 // Devolver el PDF protegido para descargar
-                return response()->download($protectedPdfPath)->deleteFileAfterSend(true);
+                //return response()->download($protectedPdfPath)->deleteFileAfterSend(true);
         
                 // Devolver el PDF generado como respuesta
-                //return $dompdf->stream("$participante->id.pdf", ['Attachment' => 0]);
+                return $dompdf->stream("$participante->id.pdf", ['Attachment' => 0]);
 }
 
-private function protectPDF($inputPath, $outputPath, $userPassword, $ownerPassword)
+private function protectPDF($inputPath, $outputPath, $userPassword, $ownerPassword,$evento,$nombre)
 {
     try {
         // Crear una nueva instancia de FPDI con TCPDF
         $pdf = new Fpdi();
 
+        // Configurar el documento
+        $pdf->SetCreator(PDF_CREATOR);
+        $pdf->SetTitle($evento);
+        $pdf->SetAuthor('UMSA - Facultad de Medicina - Vicedecanato');
+        $pdf->SetSubject('Certificado: '.$nombre);
+
         // Importar el contenido del PDF original
         $pdf->setSourceFile($inputPath);
         $tplId = $pdf->importPage(1);
-        $pdf->AddPage();
+        $pdf->AddPage('L', array(215.9, 279.4));
         $pdf->useTemplate($tplId);
 
         // Establecer la protección del PDF
         $permissions = [
-            'print' => false,
+            //'print' => true,
             'copy' => false,
             'modify' => false,
             'annot-forms' => false,
+            //'extract' => false,
+            //'assemble' => false,
         ];
-        $pdf->SetProtection(array_keys($permissions), $userPassword, $ownerPassword, 128);
+        $pdf->SetProtection(array_keys($permissions), $userPassword, $ownerPassword);
 
         // Guardar el archivo PDF protegido
         $pdf->Output($outputPath, 'F');
