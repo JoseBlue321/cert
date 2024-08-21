@@ -13,6 +13,7 @@
                         <tr>
                             <th>id</th>
                             <th>carnet</th>
+                            <th>codigo</th>
                             <th>tipo</th>
                             <th>grado</th>
                             <th>nombre</th>
@@ -28,6 +29,7 @@
                         <tr>
                             <td>{{$participante->id}}</td>
                             <td>{{$participante->carnet}}</td>
+                            <td>{{$participante->codigo}}</td>
                             <td>{{$participante->tipo}}</td>
                             <td>{{$participante->grado}}</td>
                             <td>{{$participante->nombre}}</td>
