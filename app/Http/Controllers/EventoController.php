@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
 use App\Models\Evento;
@@ -33,16 +34,14 @@ class EventoController extends Controller
 
     public function pdf(string $id){
         // Lógica para obtener datos del participante
-        $participante = Participante::findOrFail($id);
+        $participante = Participante::find($id);
         $evento = $participante->eventos;
-
 
         // Crear un objeto Carbon a partir de la fecha dada
         Carbon::setLocale('es'); 
         $date = Carbon::createFromFormat('Y-m-d', $evento->fecha);
         // Formatear la fecha a texto en español
         $formattedDate = $date->translatedFormat('l, j \de F \de Y'); // Ejemplo: "viernes, 12 de julio de 2024"
-
 
          // URL para el código QR
         $url = "ID: $participante->id
@@ -66,7 +65,8 @@ Ingresando el ID: $participante->id";
                 $dompdf->set_option('isRemoteEnabled','true');
         
                 // (Opcional) Configurar opciones de visualización (tamaño de papel, etc.)
-                $dompdf->setPaper('latter', 'landscape');
+                $dompdf->setPaper('letter', 'landscape'); //horizontal
+                //$dompdf->setPaper('letter', 'portrait');  //vertical
         
                 // Renderizar el HTML como PDF
                 $dompdf->render();
@@ -102,20 +102,25 @@ private function protectPDF($inputPath, $outputPath, $userPassword, $ownerPasswo
         // Importar el contenido del PDF original
         $pdf->setSourceFile($inputPath);
         $tplId = $pdf->importPage(1);
-        $pdf->AddPage('L', array(215.9, 279.4));
+        $pdf->AddPage('L', array(215.9, 279.4)); //horizontal
+        //$pdf->AddPage('P', array(215.9, 279.4)); //vertical
         $pdf->useTemplate($tplId);
 
         // Establecer la protección del PDF
-        $permissions = [
-            //'print' => true,
-            'copy' => false,
-            'modify' => false,
-            'annot-forms' => false,
-            //'extract' => false,
-            //'assemble' => false,
+        /*$permissions = [
+            //'print' => true,        // Permitir imprimir
+            'copy' => false,        // No permitir copiar
+            'modify' => false,      // No permitir modificar
+            'annot-forms' => true,  // Permitir agregar anotaciones y formularios (necesario para la firma)
+            'extract' => false,     // No permitir extracción
+            'assemble' => false,    // No permitir ensamblar (modificar la estructura)
         ];
-        $pdf->SetProtection(array_keys($permissions), $userPassword, $ownerPassword);
-
+        $pdf->SetProtection(
+            array_keys(array_filter($permissions)), 
+            $user_password = '', 
+            $owner_password = 'facultad de medicina'
+        );
+*/
         // Guardar el archivo PDF protegido
         $pdf->Output($outputPath, 'F');
     } catch (\Exception $e) {
@@ -124,5 +129,58 @@ private function protectPDF($inputPath, $outputPath, $userPassword, $ownerPasswo
         throw $e;
     }
 }
+
+    public function GenerarTodo(string $id){
+        $participantes = DB::select('select * from participantes where evento_id = ?', [$id]);
+        for ($i=3901; $i <=3968 ; $i++) { 
+              // Lógica para obtener datos del participante
+        $participante = Participante::find($i);
+        $evento = $participante->eventos;
+
+        // Crear un objeto Carbon a partir de la fecha dada
+        Carbon::setLocale('es'); 
+        $date = Carbon::createFromFormat('Y-m-d', $evento->fecha);
+        // Formatear la fecha a texto en español
+        $formattedDate = $date->translatedFormat('l, j \de F \de Y'); // Ejemplo: "viernes, 12 de julio de 2024"
+
+         // URL para el código QR
+        $url = "ID: $participante->id
+Nombre: $participante->nombre $participante->paterno $participante->materno
+Evento: $evento->evento
+Fecha: $formattedDate
+Verifica tu certificado en el siguiente enlace:
+https://fment.es/validacion
+Ingresando el ID: $participante->id";
+        
+         $qr = QrCode::encoding('UTF-8')->generate($url);
+
+         $html = view($evento->codigo, [
+            'participante'=>$participante,
+            'evento'=>$evento,
+            'qr'=>$qr,
+            ])->render();
+                // Configurar DomPDF
+                $dompdf = new Dompdf();
+                $dompdf->loadHtml($html);
+                $dompdf->set_option('isRemoteEnabled','true');
+        
+                // (Opcional) Configurar opciones de visualización (tamaño de papel, etc.)
+                $dompdf->setPaper('letter', 'landscape'); //horizontal
+                //$dompdf->setPaper('letter', 'portrait');  //vertical
+        
+                // Renderizar el HTML como PDF
+                $dompdf->render();
+
+                //****Configurar la protección del PDF****
+                // Guardar el contenido del PDF en un archivo temporal
+                $tempPdfPath = storage_path("app/$evento->codigo/$participante->id.pdf");
+                file_put_contents($tempPdfPath, $dompdf->output());
+        
+                // Proteger el PDF
+                $protectedPdfPath = storage_path("app/$evento->codigo/$participante->id.pdf");
+                $this->protectPDF($tempPdfPath, $protectedPdfPath, "", "vicedecanato" ,$evento->evento, "$participante->nombre $participante->paterno $participante->materno");
+        }
+        return "Se genero todos los certificados";
+    }
 
 }

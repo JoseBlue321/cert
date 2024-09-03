@@ -29,6 +29,9 @@
                             <td>
                                 <a name="" id="" class="btn btn-info" href="{{route('show.eventos',$evento->id)}}" role="button">Ver</a>
                             </td>
+                            <td>
+                                <a class="btn btn-success" href="{{route('pdf.todo',$evento->id)}}" role="button">Generar Todo</a>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>

@@ -13,7 +13,7 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "setasign/fpdf": "^1.8",
-        "setasign/fpdi": "^2.6",
+        "setasign/fpdi": "*",
         "simplesoftwareio/simple-qrcode": "^4.2",
         "tecnickcom/tcpdf": "^6.7"
     },

@@ -75,17 +75,17 @@
     font-style: normal; /* Estilo de la fuente en cursiva */
     color:rgb(23, 32, 42);
     }
+
     .nombre{
     position: absolute;
-    top: 250px; 
-    left: 150px; 
+    top: 220px; 
+    left: 120px; 
     right: 150px;
     text-align: center;
-    font-size: 30px; /*Tamaño de texto*/
-    font-family: 'fantasy',fantasy; /*tipo de texto*/
-    font-weight: bold; /* Peso de la fuente en negrita */
-    font-style: normal; /* Estilo de la fuente en cursiva */
-    text-decoration: none; /* Subraya el texto */
+    font-size: 45px; /*Tamaño de texto*/
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
     color:rgb(23, 32, 42);
     }
     .titulo5{
@@ -251,7 +251,7 @@
     </div>
 
     <div class="nombre">
-        <p>A: {{ strtoupper($participante->grado) }} {{ mb_strtoupper($participante->nombre) }} {{ mb_strtoupper($participante->paterno) }} {{ mb_strtoupper($participante->materno) }}</p>
+        <p>A: {{$participante->grado}} {{$participante->nombre}} {{$participante->paterno}} {{ $participante->materno}}</p>
     </div>
 
     <div class="titulo5">
