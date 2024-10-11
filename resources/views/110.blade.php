@@ -10,25 +10,25 @@
 .fondo {
     position: absolute;
 }
+.logo_umsa {
+    position: absolute;
+    top: 30px; 
+    left: 150px; 
+}
 .logo_medicina {
     position: absolute;
-    top: 50px;  
-    left: 47px;
+    top: 40px;  
+    left: 465px;
 }
-.logo_carrera_med {
+.logo_iinsad {
     position: absolute;
-    top: 50px;  
-    left: 150px;
-}
-.logo_genetica {
-    position: absolute;
-    top: 50px;  
-    right: 80px;
+    top: 40px;  
+    right: 150px;
 }
 
 .titulo1{
     position: absolute;
-    top: 40px; 
+    top: 150px; 
     left: 100px; 
     right: 100px;
     text-align: center;
@@ -42,7 +42,7 @@
 
     .titulo2{
     position: absolute;
-    top: 75px; 
+    top: 185px; 
     left: 100px; 
     right: 100px;
     text-align: center;
@@ -56,11 +56,11 @@
 
     .titulo3{
     position: absolute;
-    top: 90px; 
+    top: 200px; 
     left: 100px; 
     right: 100px;
     text-align: center;
-    font-size: 11px; /*Tamaño de texto*/
+    font-size: 10px; /*Tamaño de texto*/
     font-family: "Roboto Slab", serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
@@ -81,38 +81,23 @@
     font-style: normal;
     color:rgb(40, 116, 166);
     }
-
-    .titulo5{
+    .confiere{
     position: absolute;
-    top: 140px; 
-    left: 100px; 
-    right: 100px;
+    top: 240px; 
+    left: 100px;
+    right: 100px; 
     text-align: center;
-    font-size: 10px; /*Tamaño de texto*/
-    font-family: "Roboto Slab", serif;
+    font-size: 20px; /*Tamaño de texto*/
+    font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
-    color:rgb(40, 116, 166);
-    }
-
-    .certificado{
-    position: absolute;
-    top: 180px; 
-    left: 90px; 
-    right: 90px;
-    text-align: center;
-    font-size: 14px; /*Tamaño de texto*/
-    font-family: "Roboto Slab", serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    color:rgb(40, 116, 166);
+    color:rgb(23, 32, 42);
     }
     .correlativo{
     position: absolute;
-    top: 165px; 
-    right: 50px; 
+    top: 160px; 
+    right: 30px; 
     text-align: center;
     font-size: 15px; /*Tamaño de texto*/
     font-family: "Playfair Display", serif;
@@ -121,51 +106,47 @@
     font-style: normal;
     color:rgb(23, 32, 42);
     }
-    .confiere{
+    .certificado{
     position: absolute;
-    top: 230px; 
-    left: 150px; 
+    top: 250px; 
+    left: 100px; 
+    right: 100px;
     text-align: center;
     font-size: 20px; /*Tamaño de texto*/
-    font-family: "Playfair Display", serif;
+    font-family: "Roboto Slab", serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
     color:rgb(23, 32, 42);
     }
-
     .nombre{
     position: absolute;
-    top: 240px; 
+    top: 290px; 
     left: 100px; 
     right: 100px;
     text-align: center;
-    font-size: 50px; /*Tamaño de texto*/
+    font-size: 45px; /*Tamaño de texto*/
     font-family: "Great Vibes", cursive;
     font-weight: 400;
     font-style: normal;
     color:rgb(23, 32, 42);
     }
-    .texto1{
+    .a{
     position: absolute;
-    top: 340px; 
-    left: 150px; 
+    top: 310px; 
+    left: 90px; 
     right: 100px;
-    text-align: justify;
-    font-size: 20px; /*Tamaño de texto*/
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
+    text-align: left;
+    font-size: 50px; /*Tamaño de texto*/
     color:rgb(23, 32, 42);
     }
-    .texto2{
+    .texto1{
     position: absolute;
-    top: 360px; 
+    top: 400px; 
     left: 100px; 
     right: 100px;
     text-align: justify;
-    font-size: 20px; /*Tamaño de texto*/
+    font-size: 25px; /*Tamaño de texto*/
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
@@ -174,13 +155,13 @@
     }
     .firma_vicedecana{
     position: absolute;
-    bottom: 95px; 
-    left: 450px; 
+    bottom: 85px; 
+    left: 300px; 
     right: 100px;
     }
     .nombre_vicedecana{
     position: absolute;
-    bottom: 100px; 
+    bottom: 80px; 
     left: 150px; 
     right: 150px;
     text-align: center;
@@ -195,23 +176,32 @@
 
     .sello{
     position: absolute;
-    bottom: 120px; 
-    right: 200px; 
+    bottom: 170px; 
+    right: 130px; 
     }
 
     .qr {
     position: absolute;
-    bottom: 100px;
+    bottom: 80px;
     left: 100px;
+    text-align: center;
+    font-size: 11px; /*Tamaño de texto*/
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    line-height: 15px;
+    color:rgb(23, 32, 42);
+
 }
     .fecha {
     position: absolute;
     /*top: 10px;*/ 
     /*left: 20px;*/ 
     right:100px;
-    bottom:300px;
+    bottom:230px;
     text-align: justify;
-    font-size: 20px; /*Tamaño de texto*/
+    font-size: 25px; /*Tamaño de texto*/
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
@@ -224,22 +214,24 @@
 <body>
     <!--Fondo-->
     <div class="fondo">
-        <img src="{{asset('img/107/fondo.png')}}" alt="fondo" width="1056px" height="816px">
+        <img src="{{asset('img/110/fondo_iinsad.png')}}" alt="fondo" width="1058px" height="816px">
+    </div>
+    <!--Logo umsa-->
+    <div class="logo_umsa">
+        <img src="{{asset('img/umsa.png')}}" alt="logo umsa" width="80px">
     </div>
     <!--Logo medicina-->
     <div class="logo_medicina">
-        <img src="{{asset('img/104/medicina.png')}}" alt="logo medicina" width="100px">
+        <img src="{{asset('img/104/medicina.png')}}" alt="logo medicina" width="110px">
     </div>
-    <!--Logo carrera de medicina-->
-    <div class="logo_carrera_med">
-        <img src="{{asset('img/107/carrera_med.png')}}" alt="logo medicina" width="91px">
-    </div>
-    <!--Logo genetica-->
-    <div class="logo_genetica">
-        <img src="{{asset('img/107/genetica.png')}}" alt="logo medicina" width="110px">
+    <!--Logo iinsad-->
+    <div class="logo_iinsad">
+        <img src="{{asset('img/110/iinsad.png')}}" alt="logo iinsad" width="110px">
     </div>
 
-    <!--Titulo-->
+   
+
+    <!--Contenido-->
     <div class="titulo1">
         <h1>
             UNIVERSIDAD MAYOR DE SAN ANDRÉS
@@ -252,74 +244,66 @@
     </div>
     <div class="titulo3">
         <h1>
-            CARRERA DE MEDICINA
+            INSTITUTO DE INVESTIGACIÓN EN SALUD Y DESARROLLO IINSAD
         </h1>
-    </div>
-    <div class="titulo4">
-        <h2>
-        INSTITUTO DE GENÉTICA
-        </h2>
-    </div>
-    <div class="titulo5">
-        <h2>
-            UNIDAD DE GENÉTICA MÉDICA
-        </h2>
-    </div>
-
-    <!--Contenido-->
-    <div class="certificado">
-        <h1>
-            “GENÉTICA MÉDICA EN LA ATENCIÓN PRIMARIA DE SALUD”
-        </h1>
-    </div>
-
-    <div class="correlativo">
-        FMENT/VICEDEC/CERT N° {{$participante->id}}/2024
     </div>
 
     <div class="confiere">
-        SE CONFIERE EL PRESENTE CERTIFICADO A:
-    </div>
-
-    <div class="nombre">
-        {{$participante->grado}} {{$participante->nombre}} {{$participante->paterno}} {{$participante->materno}}
+        CONFIERE EL PRESENTE
     </div>
 <!--
-    <div class="texto1">
-        EN CALIDAD DE: <b>{{ strtoupper($participante->tipo) }}</b>
+    <div class="correlativo">
+        FMENT/VICEDEC/CERT N° {{$participante->id}}/2024
     </div>
 -->
-    <div class="texto2">
-
-        Por su  dedicación y empeño como <b>{{ strtoupper($participante->tipo) }}</b> del Curso de Actualización en: 
-       <b> “GENÉTICA MÉDICA EN ATENCIÓN PRIMARIA EN SALUD”</b>, 
-        realizado del 12 al 16 de agosto del 2024, modalidad híbrida, 
-        en el auditorio del Instituto de Genética, con una carga horaria de 20 horas académicas.
+    <div class="certificado">
+        <h1>
+            CERTIFICADO
+        </h1>
+    </div>
+    <div class="nombre">
+            {{$participante->grado}} {{$participante->nombre}} {{$participante->paterno}} {{$participante->materno}}
     </div>
 
+    <div class="a">
+        A:
+    </div>
 
+    <div class="texto1">
+        En el marco de la celebración de los 25 años del Instituto, 
+        extendemos nuestras más sinceras felicitaciones y agradecimiento, 
+        en reconocimiento a su destacada trayectoria académica y su compromiso 
+        con la investigación a lo largo de sus años de servicio.
+    </div>
+
+    <!--
     <div class="firma_vicedecana">
-        <img src="{{asset('img/104/vicedecana.png')}}" alt="firma" width="180px">
+        <img src="{{asset('img/104/vicedecana.png')}}" alt="firma" width="50%">
     </div>
+-->
     <div class="nombre_vicedecana">
         _______________________________ <br>
-        Dra. Mónica C. Guzmán Mendoza <br>
-        <b>VICEDECANA</b> <br>
-        FACULTAD DE MEDICINA
+        Dra. Ana María Aguilar Liendo <br>
+        <b>DIRECTORA</b>
     </div>
     <div class="fecha">
-        La Paz, 20 de agosto de 2024
+        La Paz, septiembre 2024
     </div>
 
     <!--QR-->
-    <div class="qr text-center">
-        ID: {{$participante->id}}-{{$participante->codigo}}-2024 <br>
-        <img src="data:image/png;base64,{{ base64_encode($qr) }}" height="120px" width="120px" alt="Código QR">
+    <!--
+    <div class="qr">
+        IINSAD/CERT. Nro. {{$participante->codigo}}-2024 ID: {{$participante->id}} <br>
+        <img src="data:image/png;base64,{{ base64_encode($qr) }}" height="130px" width="130px" alt="Código QR">
+        <br>
+    -->
     </div>
 
+    <!--
     <div class="sello">
         <img src="{{asset('img/sello_vicedecanato_1.png')}}" alt="sello" width="150px">
     </div>
+-->
 
     @include('partials.js')
 </body>
