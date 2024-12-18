@@ -13,9 +13,9 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('evento_id');
             $table->foreign('evento_id')->references('id')->on('eventos');
-            $table->string('certificado')->nullable();
+            $table->integer('codigo');
             $table->string('tipo',30);
-            $table->string('grado',10)->nullable();
+            $table->string('grado',20)->nullable();
             $table->string('carnet');
             $table->string('nombre');
             $table->string('paterno')->nullable();

@@ -25,7 +25,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($evento->participantes as $participante)
+                        @foreach ($participantes as $participante)
                         <tr>
                             <td>{{$participante->id}}</td>
                             <td>{{$participante->carnet}}</td>

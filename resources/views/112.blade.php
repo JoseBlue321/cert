@@ -20,11 +20,6 @@
     top: 40px;  
     right: 30px;
 }
-.logo_iinsad {
-    position: absolute;
-    top: 180px;  
-    right: 30px;
-}
 
 .titulo1{
     position: absolute;
@@ -56,7 +51,7 @@
 
     .titulo3{
     position: absolute;
-    top: 96px; 
+    top: 90px; 
     left: 100px; 
     right: 100px;
     text-align: center;
@@ -79,7 +74,21 @@
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
-    color:rgb(231, 76, 60 );
+    color:rgb(40, 116, 166);
+    }
+
+    .titulo5{
+    position: absolute;
+    top: 140px; 
+    left: 100px; 
+    right: 100px;
+    text-align: center;
+    font-size: 10px; /*Tamaño de texto*/
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    color:rgb(40, 116, 166);
     }
     .confiere{
     position: absolute;
@@ -95,7 +104,7 @@
     }
     .correlativo{
     position: absolute;
-    top: 150px; 
+    top: 160px; 
     right: 30px; 
     text-align: center;
     font-size: 15px; /*Tamaño de texto*/
@@ -121,10 +130,10 @@
     .nombre{
     position: absolute;
     top: 280px; 
-    left: 70px; 
-    right: 70px;
+    left: 100px; 
+    right: 100px;
     text-align: center;
-    font-size: 43px; /*Tamaño de texto*/
+    font-size: 50px; /*Tamaño de texto*/
     font-family: "Great Vibes", cursive;
     font-weight: 400;
     font-style: normal;
@@ -133,8 +142,8 @@
     .texto1{
     position: absolute;
     top: 400px; 
-    left: 100px; 
-    right: 100px;
+    left: 80px; 
+    right: 80px;
     text-align: justify;
     font-size: 25px; /*Tamaño de texto*/
     font-family: "Playfair Display", serif;
@@ -143,33 +152,17 @@
     font-style: normal;
     color:rgb(23, 32, 42);
     }
-    .firma_ana{
-    position: absolute;
-    bottom: 118px; 
-    left: 120px; 
-    }
-    .nombre_iinsad{
-    position: absolute;
-    bottom: 100px; 
-    left: 100px; 
-    text-align: center;
-    font-size: 15px; /*Tamaño de texto*/
-    font-family: "Roboto Slab", serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    line-height: 15px;
-    color:rgb(23, 32, 42);
-    }
     .firma_vicedecana{
     position: absolute;
     bottom: 85px; 
-    left: 490px; 
+    left: 300px; 
+    right: 100px;
     }
     .nombre_vicedecana{
     position: absolute;
     bottom: 100px; 
-    right: 100px;
+    left: 150px; 
+    right: 150px;
     text-align: center;
     font-size: 15px; /*Tamaño de texto*/
     font-family: "Roboto Slab", serif;
@@ -180,16 +173,15 @@
     color:rgb(23, 32, 42);
     }
 
-
     .sello{
     position: absolute;
-    bottom: 210px; 
-    right: 310px; 
+    bottom: 170px; 
+    right: 130px; 
     }
 
     .qr {
     position: absolute;
-    bottom: 280px;
+    bottom: 100px;
     left: 100px;
 }
     .fecha {
@@ -197,7 +189,7 @@
     /*top: 10px;*/ 
     /*left: 20px;*/ 
     right:100px;
-    bottom:360px;
+    bottom:380px;
     text-align: justify;
     font-size: 25px; /*Tamaño de texto*/
     font-family: "Playfair Display", serif;
@@ -212,7 +204,7 @@
 <body>
     <!--Fondo-->
     <div class="fondo">
-        <img src="{{asset('img/110/fondo_1.png')}}" alt="fondo" width="816px" height="1056px">
+        <img src="{{asset('img/fondo.png')}}" alt="fondo" width="816px" height="1056px">
     </div>
     <!--Logo umsa-->
     <div class="logo_umsa">
@@ -221,10 +213,6 @@
     <!--Logo medicina-->
     <div class="logo_medicina">
         <img src="{{asset('img/104/medicina.png')}}" alt="logo medicina" width="100px">
-    </div>
-    <!--Logo miinsad-->
-    <div class="logo_iinsad">
-        <img src="{{asset('img/110/ii.jpeg')}}" alt="logo iinsad" width="100px">
     </div>
 
    
@@ -241,13 +229,18 @@
         </h2>
     </div>
     <div class="titulo3">
-        <h2>
-            INSTITUTO DE INVESTIGACIÓN EN SALUD Y DESARROLLO
-        </h2>
+        <h1>
+            CARRERA DE MEDICINA
+        </h1>
     </div>
     <div class="titulo4">
         <h2>
-            IINSAD
+            INSTITUTO DE GENÉTICA
+        </h2>
+    </div>
+    <div class="titulo5">
+        <h2>
+            UNIDAD DE GENÉTICA MÉDICA
         </h2>
     </div>
 
@@ -269,29 +262,15 @@
     </div>
 
     <div class="texto1">
-    Por su participación en calidad de <b>{{ ($participante->tipo) }}</b>  
-    en la <b>"V Jornada Científica del Instituto de Investigación en Salud y Desarrollo" (IINSAD), </b>
-    en el marco de la celebración de los 25 años del Instituto. <br>
-    Realizado en fecha 13 de septiembre del 2024, modalidad Presencial y Virtual. <br>
-    Carga horaria: 8 Horas académicas.
-    </div>
-    
-    <div class="fecha">
-        La Paz, septiembre de 2024
-    </div>
-
-    <div class="firma_ana">
-        <img src="{{asset('img/110/ana.png')}}" alt="firma" width="70%">
-    </div>
-    <div class="nombre_iinsad">
-        _______________________________ <br>
-        Dra. Ana Maria Aguilar Liendo <br>
-        <b>DIRECTORA</b> <br>
-        IINSAD/UMSA
+    Por su excelente participación en calidad de <b>{{ ($participante->tipo) }}</b> - Modalidad <b>Presencial</b> en el Curso de Capacitación <b style="color: rgb(34, 153, 84)"> "Estadistica Genética Aplicada a Poblaciones, Utilizando R"</b>.
+    <br>
+    Realizado del 11 al 15 de noviembre del 2024, en el Instituto de Genética - Piso 9 de la Facultad de Medicina.
+    <br>
+    Carga horaria: 10 Horas académica
     </div>
 
     <div class="firma_vicedecana">
-        <img src="{{asset('img/104/vicedecana.png')}}" alt="firma" width="60%">
+        <img src="{{asset('img/104/vicedecana.png')}}" alt="firma" width="50%">
     </div>
     <div class="nombre_vicedecana">
         _______________________________ <br>
@@ -299,16 +278,15 @@
         <b>VICEDECANA</b> <br>
         FACULTAD DE MEDICINA
     </div>
-
-
-
-    <!--QR-->
-  
-    <div class="qr text-center">
-        <!--ID: {{$participante->id}}-{{$participante->codigo}}-2024 <br> -->
-        <img src="data:image/png;base64,{{ base64_encode($qr) }}" height="110px" width="110px" alt="Código QR">
+    <div class="fecha">
+        La Paz, noviembre de 2024
     </div>
 
+    <!--QR-->
+    <div class="qr text-center">
+        ID: {{$participante->id}}-{{$participante->codigo}}-2024 <br>
+        <img src="data:image/png;base64,{{ base64_encode($qr) }}" height="130px" width="130px" alt="Código QR">
+    </div>
 
     <div class="sello">
         <img src="{{asset('img/sello_vicedecanato_1.png')}}" alt="sello" width="150px">

@@ -27,8 +27,10 @@ class EventoController extends Controller
 
     public function show(string $id){
         $evento = Evento::findOrFail($id);
+        $parts = DB::select('select * from participantes p 
+        where evento_id ='.$id.'order by(id);');
         return view('show',[
-            'evento'=>$evento,
+            'participantes'=>$parts,
         ]);
     }
 
@@ -47,10 +49,10 @@ class EventoController extends Controller
         $url = "ID: $participante->id
 Nombre: $participante->nombre $participante->paterno $participante->materno
 Evento: $evento->evento
-Fecha: $formattedDate
-Verifica tu certificado en el siguiente enlace:
-https://fment.es/validacion
-Ingresando el ID: $participante->id";
+Fecha: $formattedDate";
+//Verifica tu certificado en el siguiente enlace:
+//https://fment.es/validacion
+//Ingresando el ID: $participante->id";
         
          $qr = QrCode::encoding('UTF-8')->generate($url);
 
@@ -131,9 +133,8 @@ private function protectPDF($inputPath, $outputPath, $userPassword, $ownerPasswo
 }
 
     public function GenerarTodo(string $id){
-        $participantes = DB::select('select * from participantes where evento_id = ?', [$id]);
-        for ($i=3901; $i <=3968 ; $i++) { 
-              // Lógica para obtener datos del participante
+        for ($i=6151; $i <=6207 ; $i++) { 
+             // Lógica para obtener datos del participante
         $participante = Participante::find($i);
         $evento = $participante->eventos;
 
@@ -147,10 +148,10 @@ private function protectPDF($inputPath, $outputPath, $userPassword, $ownerPasswo
         $url = "ID: $participante->id
 Nombre: $participante->nombre $participante->paterno $participante->materno
 Evento: $evento->evento
-Fecha: $formattedDate
-Verifica tu certificado en el siguiente enlace:
-https://fment.es/validacion
-Ingresando el ID: $participante->id";
+Fecha: $formattedDate";
+//Verifica tu certificado en el siguiente enlace:
+//https://fment.es/validacion
+//Ingresando el ID: $participante->id";
         
          $qr = QrCode::encoding('UTF-8')->generate($url);
 
@@ -179,6 +180,8 @@ Ingresando el ID: $participante->id";
                 // Proteger el PDF
                 $protectedPdfPath = storage_path("app/$evento->codigo/$participante->id.pdf");
                 $this->protectPDF($tempPdfPath, $protectedPdfPath, "", "vicedecanato" ,$evento->evento, "$participante->nombre $participante->paterno $participante->materno");
+        
+                
         }
         return "Se genero todos los certificados";
     }

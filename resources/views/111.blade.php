@@ -12,19 +12,15 @@
 }
 .logo_umsa {
     position: absolute;
-    top: 30px; 
-    left: 30px; 
+    top: 30px;  
+    left: 115px;
 }
 .logo_medicina {
     position: absolute;
-    top: 40px;  
-    right: 30px;
+    top: 50px;  
+    right: 80px;
 }
-.logo_iinsad {
-    position: absolute;
-    top: 180px;  
-    right: 30px;
-}
+
 
 .titulo1{
     position: absolute;
@@ -37,7 +33,7 @@
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
-    color:rgb(40, 116, 166);
+    color:rgb(23, 32, 42);
     }
 
     .titulo2{
@@ -51,21 +47,21 @@
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
-    color:rgb(40, 116, 166);
+    color:rgb(23, 32, 42);
     }
 
     .titulo3{
     position: absolute;
-    top: 96px; 
+    top: 93px; 
     left: 100px; 
     right: 100px;
     text-align: center;
-    font-size: 11px; /*Tamaño de texto*/
+    font-size: 10px; /*Tamaño de texto*/
     font-family: "Roboto Slab", serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
-    color:rgb(231, 76, 60 );
+    color:rgb(23, 32, 42 );
     }
 
     .titulo4{
@@ -79,24 +75,53 @@
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
-    color:rgb(231, 76, 60 );
+    color:rgb(23, 32, 42);
     }
-    .confiere{
+
+    .titulo5{
     position: absolute;
-    top: 180px; 
+    top: 140px; 
     left: 100px; 
+    right: 100px;
     text-align: center;
-    font-size: 25px; /*Tamaño de texto*/
-    font-family: "Playfair Display", serif;
+    font-size: 10px; /*Tamaño de texto*/
+    font-family: "Roboto Slab", serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
     color:rgb(23, 32, 42);
     }
+
+    .certificado{
+    position: absolute;
+    top: 180px; 
+    left: 90px; 
+    right: 90px;
+    text-align: center;
+    font-size: 14px; /*Tamaño de texto*/
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    color:rgb(40, 116, 166);
+    }
+    .certificado1{
+    position: absolute;
+    top: 200px; 
+    left: 90px; 
+    right: 90px;
+    text-align: center;
+    font-size: 15px; /*Tamaño de texto*/
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    color:rgb(169, 50, 38);
+    }
     .correlativo{
     position: absolute;
-    top: 150px; 
-    right: 30px; 
+    top: 165px; 
+    right: 50px; 
     text-align: center;
     font-size: 15px; /*Tamaño de texto*/
     font-family: "Playfair Display", serif;
@@ -105,26 +130,26 @@
     font-style: normal;
     color:rgb(23, 32, 42);
     }
-    .certificado{
+    .confiere{
     position: absolute;
-    top: 220px; 
+    top: 250px; 
     left: 100px; 
-    right: 100px;
     text-align: center;
     font-size: 20px; /*Tamaño de texto*/
-    font-family: "Roboto Slab", serif;
+    font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
     color:rgb(23, 32, 42);
     }
+
     .nombre{
     position: absolute;
-    top: 280px; 
-    left: 70px; 
-    right: 70px;
+    top: 260px; 
+    left: 90px; 
+    right: 90px;
     text-align: center;
-    font-size: 43px; /*Tamaño de texto*/
+    font-size: 50px; /*Tamaño de texto*/
     font-family: "Great Vibes", cursive;
     font-weight: 400;
     font-style: normal;
@@ -132,44 +157,41 @@
     }
     .texto1{
     position: absolute;
-    top: 400px; 
-    left: 100px; 
+    top: 350px; 
+    left: 150px; 
     right: 100px;
     text-align: justify;
-    font-size: 25px; /*Tamaño de texto*/
+    font-size: 20px; /*Tamaño de texto*/
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
     color:rgb(23, 32, 42);
     }
-    .firma_ana{
+    .texto2{
     position: absolute;
-    bottom: 118px; 
-    left: 120px; 
-    }
-    .nombre_iinsad{
-    position: absolute;
-    bottom: 100px; 
+    top: 370px; 
     left: 100px; 
-    text-align: center;
-    font-size: 15px; /*Tamaño de texto*/
-    font-family: "Roboto Slab", serif;
+    right: 100px;
+    text-align: justify;
+    font-size: 20px; /*Tamaño de texto*/
+    font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
-    line-height: 15px;
     color:rgb(23, 32, 42);
     }
     .firma_vicedecana{
     position: absolute;
-    bottom: 85px; 
-    left: 490px; 
+    bottom: 95px; 
+    left: 450px; 
+    right: 100px;
     }
     .nombre_vicedecana{
     position: absolute;
     bottom: 100px; 
-    right: 100px;
+    left: 150px; 
+    right: 150px;
     text-align: center;
     font-size: 15px; /*Tamaño de texto*/
     font-family: "Roboto Slab", serif;
@@ -180,16 +202,15 @@
     color:rgb(23, 32, 42);
     }
 
-
     .sello{
     position: absolute;
-    bottom: 210px; 
-    right: 310px; 
+    bottom: 120px; 
+    right: 200px; 
     }
 
     .qr {
     position: absolute;
-    bottom: 280px;
+    bottom: 100px;
     left: 100px;
 }
     .fecha {
@@ -197,9 +218,9 @@
     /*top: 10px;*/ 
     /*left: 20px;*/ 
     right:100px;
-    bottom:360px;
+    bottom:300px;
     text-align: justify;
-    font-size: 25px; /*Tamaño de texto*/
+    font-size: 20px; /*Tamaño de texto*/
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
@@ -212,24 +233,19 @@
 <body>
     <!--Fondo-->
     <div class="fondo">
-        <img src="{{asset('img/110/fondo_1.png')}}" alt="fondo" width="816px" height="1056px">
+        <img src="{{asset('img/104/1.png')}}" alt="fondo" width="1056px" height="816px">
     </div>
+
     <!--Logo umsa-->
     <div class="logo_umsa">
-        <img src="{{asset('img/umsa.png')}}" alt="logo umsa" width="80px">
+        <img src="{{asset('img/umsa.png')}}" alt="logo medicina" width="85px">
     </div>
-    <!--Logo medicina-->
-    <div class="logo_medicina">
-        <img src="{{asset('img/104/medicina.png')}}" alt="logo medicina" width="100px">
-    </div>
-    <!--Logo miinsad-->
-    <div class="logo_iinsad">
-        <img src="{{asset('img/110/ii.jpeg')}}" alt="logo iinsad" width="100px">
-    </div>
+        <!--Logo medicina-->
+        <div class="logo_medicina">
+            <img src="{{asset('img/104/medicina.png')}}" alt="logo medicina" width="110px">
+        </div>
 
-   
-
-    <!--Contenido-->
+    <!--Titulo-->
     <div class="titulo1">
         <h1>
             UNIVERSIDAD MAYOR DE SAN ANDRÉS
@@ -241,57 +257,59 @@
         </h2>
     </div>
     <div class="titulo3">
-        <h2>
-            INSTITUTO DE INVESTIGACIÓN EN SALUD Y DESARROLLO
-        </h2>
+        <h1>
+            DEPARTAMENTO DE MEDICINA Y SALUD MENTAL
+        </h1>
     </div>
     <div class="titulo4">
         <h2>
-            IINSAD
+        CÁTEDRA DE MEDICINA II
+        </h2>
+    </div>
+    <div class="titulo5">
+        <h2>
+            CAPÍTULO DE INMUNOLOGÍA
         </h2>
     </div>
 
-    <div class="confiere">
-        Se confiere el Presente
+    <!--Contenido-->
+    <div class="certificado">
+        <h2>
+            CURSO INTERNACIONAL DE ACTUALIZACIÓN EN
+        </h2>
+    </div>
+    <div class="certificado1">
+        <h1>
+           "MICROBIOTA, INMUNIDAD Y ENFERMEDAD"
+        </h1>
     </div>
 
     <div class="correlativo">
         FMENT/VICEDEC/CERT N° {{$participante->id}}/2024
     </div>
 
-    <div class="certificado">
-        <h1>
-            CERTIFICADO
-        </h1>
+    <div class="confiere">
+        Se otorga el presente certificado a:
     </div>
+
     <div class="nombre">
-            A: {{$participante->grado}} {{$participante->nombre}} {{$participante->paterno}} {{$participante->materno}}
+        {{$participante->grado}} {{$participante->nombre}} {{$participante->paterno}} {{$participante->materno}}
     </div>
-
+<!--
     <div class="texto1">
-    Por su participación en calidad de <b>{{ ($participante->tipo) }}</b>  
-    en la <b>"V Jornada Científica del Instituto de Investigación en Salud y Desarrollo" (IINSAD), </b>
-    en el marco de la celebración de los 25 años del Instituto. <br>
-    Realizado en fecha 13 de septiembre del 2024, modalidad Presencial y Virtual. <br>
-    Carga horaria: 8 Horas académicas.
+        EN CALIDAD DE: <b>{{ strtoupper($participante->tipo) }}</b>
     </div>
-    
-    <div class="fecha">
-        La Paz, septiembre de 2024
+-->
+    <div class="texto2">
+        Por su participación como <b>{{ strtoupper($participante->tipo) }}</b> 
+        en el
+        <b>Curso Internacional de Actualización en "MICROBIOTA, INMUNIDAD Y ENFERMEDAD"</b>, 
+        llevado a cabo el día 9 de octubre modalidad virtual. Valor curricular de <b>10</b> horas académicas.
     </div>
 
-    <div class="firma_ana">
-        <img src="{{asset('img/110/ana.png')}}" alt="firma" width="70%">
-    </div>
-    <div class="nombre_iinsad">
-        _______________________________ <br>
-        Dra. Ana Maria Aguilar Liendo <br>
-        <b>DIRECTORA</b> <br>
-        IINSAD/UMSA
-    </div>
 
     <div class="firma_vicedecana">
-        <img src="{{asset('img/104/vicedecana.png')}}" alt="firma" width="60%">
+        <img src="{{asset('img/104/vicedecana.png')}}" alt="firma" width="180px">
     </div>
     <div class="nombre_vicedecana">
         _______________________________ <br>
@@ -299,16 +317,15 @@
         <b>VICEDECANA</b> <br>
         FACULTAD DE MEDICINA
     </div>
-
-
-
-    <!--QR-->
-  
-    <div class="qr text-center">
-        <!--ID: {{$participante->id}}-{{$participante->codigo}}-2024 <br> -->
-        <img src="data:image/png;base64,{{ base64_encode($qr) }}" height="110px" width="110px" alt="Código QR">
+    <div class="fecha">
+        La Paz, octubre de 2024
     </div>
 
+    <!--QR-->
+    <div class="qr text-center">
+        ID: {{$participante->id}}-{{$participante->codigo}}-2024 <br>
+        <img src="data:image/png;base64,{{ base64_encode($qr) }}" height="120px" width="120px" alt="Código QR">
+    </div>
 
     <div class="sello">
         <img src="{{asset('img/sello_vicedecanato_1.png')}}" alt="sello" width="150px">
